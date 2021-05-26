@@ -17,9 +17,6 @@ let package = Package(name: "RxOptional",
                         // Dependencies declare other packages that this package depends on.
                         // Dependencies declare other packages that this package depends on.
                         .package(url: "https://github.com/ReactiveX/RxSwift.git", .upToNextMajor(from: "6.0.0")),
-                        // Development
-                        .package(url: "https://github.com/Quick/Quick.git", .upToNextMajor(from: "3.0.0")), // dev
-                        .package(url: "https://github.com/Quick/Nimble.git", .upToNextMajor(from: "9.0.0")) // dev
                       ],
 
                       targets: [
@@ -27,6 +24,5 @@ let package = Package(name: "RxOptional",
                         // Targets can depend on other targets in this package, and on products in packages which this package depends on.
                         .target(name: "RxOptional", dependencies: ["RxSwift", "RxCocoa"],
                                 path: "Sources"),
-                        .testTarget(name: "RxOptionalTests", dependencies: ["RxOptional", "Quick", "Nimble"]) // dev
                       ],
                       swiftLanguageVersions: [.v5])
